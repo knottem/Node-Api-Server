@@ -11,7 +11,7 @@ sudo apt-get install nodejs
 ```
 or on windows download from [nodejs.org](https://nodejs.org/en/)
 
-### Install npm (node package manager) NOT NEEDED ON WINDOWS
+### Install npm (only if you don't have it, it should be installed with node)
 ```bash
 sudo apt-get install npm
 ```
