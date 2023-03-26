@@ -11,17 +11,16 @@ sudo apt-get install nodejs
 ```
 or on windows download from [nodejs.org](https://nodejs.org/en/)
 
-### Install npm
+### Install npm (node package manager) NOT NEEDED ON WINDOWS
 ```bash
 sudo apt-get install npm
 ```
-or on windows you should have it installed with nodejs
 
 ### Install dependencies
 ```bash
 npm install express
 ```
-where express is the name of the package, do this in the folder where you have the server.js file
+Do this in the folder where you have the server.js file
 
 ## Run the server
 ```bash
