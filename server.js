@@ -12,6 +12,17 @@ app.get('/fakestore', (req, res) => {
     return res.status(200).json(products);
 });
 
+// Gives you all the products of a specific category
+app.get('/fakestore/category/:category', (req, res) => {
+    const category = req.params.category;
+    const productsByCategory = products.filter(p => p.category === category);
+    if (productsByCategory.length > 0) {
+        return res.json(productsByCategory);
+    } else {
+        return res.status(404).json({ error: 'Category not found' });
+    }
+});
+
 // Gives you a specific product
 app.get('/fakestore/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
@@ -44,17 +55,6 @@ app.get('/fakestore/:id/:value', (req, res) => {
         }
     } else {
         return res.status(400).json({ error: 'Invalid product ID' });
-    }
-});
-
-// Gives you all the products of a specific category
-app.get('/fakestore/category/:category', (req, res) => {
-    const category = req.params.category;
-    const productsByCategory = products.filter(p => p.category === category);
-    if (productsByCategory.length > 0) {
-        return res.json(productsByCategory);
-    } else {
-        return res.status(404).json({ error: 'Category not found' });
     }
 });
 
