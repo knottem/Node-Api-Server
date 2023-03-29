@@ -28,6 +28,13 @@ node server.js
 ```
 
 ## Test the server
-```bash
-curl http://localhost:3000/fakestore/1
-```
+
+Open a browser and go to the following links after you have run the server:
+
+http://localhost:3000/fakestore/1
+
+http://localhost:3000/fakestore/
+
+http://localhost:3000/fakestore/category/electronics
+
+
